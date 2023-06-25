@@ -1,0 +1,216 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+    defaultConfig {
+        applicationId "com.vxiaokang.video"
+        minSdkVersion 19
+        targetSdkVersion 30
+        versionCode 128
+        versionName "1.2.8"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        renderscriptTargetApi 19
+        renderscriptSupportModeEnabled true
+        multiDexEnabled true
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", 'arm64-v8a'
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    signingConfigs {
+        demokey {
+            keyAlias 'myvideo'
+            keyPassword 'myvideo@123'
+            storeFile file('myvideo.keystore')
+            storePassword 'myvideo@123'
+        }
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.demokey
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.demokey
+        }
+    }
+
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+
+    greendao{
+        schemaVersion 3
+        //生成的DAO，DaoMaster和DaoSession的包路径。默认与表实体所在的包路径相同
+        // daoPackage 'com.vxiaokang.video.entity.dao'
+        //生成源文件的路径。默认源文件目录是在build目录中的(build/generated/source/greendao)
+       // targetGenDir 'src/main/java'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar','*.aar'])
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+
+    implementation 'com.mbridge.msdk.china:mbnative:16.2.62'
+    implementation 'com.mbridge.msdk.china:reward:16.2.62'
+    implementation 'com.mbridge.msdk.china:mbsplash:16.2.62'
+    implementation 'com.mbridge.msdk.china:newinterstitial:16.2.62'
+    implementation 'com.mbridge.msdk.china:mbnativeadvanced:16.2.62'
+    implementation 'com.mbridge.msdk.china:mbbanner:16.2.62'
+
+    //recyclerview
+    implementation "androidx.recyclerview:recyclerview:1.1.0"
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
+    //圖片處理
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+    //webview
+    annotationProcessor 'androidx.annotation:annotation:1.1.0'
+    implementation 'com.github.ctiao:DanmakuFlameMaster:0.9.25'
+    implementation 'com.github.ctiao:ndkbitmap-armv7a:0.9.21'
+    implementation "com.google.android.material:material:1.0.0"
+    //权限
+    implementation 'com.yanzhenjie:permission:2.0.3'
+    //弹窗
+    implementation 'com.github.limxing:Android-PromptDialog:1.1.3'
+    //ImmersionBar -- android 4.4以上沉浸式状态栏与导航栏
+    implementation 'com.gyf.immersionbar:immersionbar:3.0.0'
+    //日志适配器logger
+    implementation 'com.orhanobut:logger:2.1.1'
+    //OKhttp
+    implementation 'com.zhy:okhttputils:2.6.2'
+    implementation 'com.squareup.okhttp3:okhttp:4.2.1'
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    //CardView 是 Google 官方发布 MD 风格卡片布局控件，开发者可以很方便的使用它将布局做成卡片效果
+    implementation 'androidx.cardview:cardview:1.0.0'//最新版本
+
+    //视频播放
+    // 必选，内部默认使用系统mediaplayer进行解码
+   // implementation 'com.github.dueeeke.dkplayer:dkplayer-java:3.2.6'
+    // 可选，包含StandardVideoController的实现
+   //implementation 'com.github.dueeeke.dkplayer:dkplayer-ui:3.2.6'
+    // 可选，使用exoplayer进行解码
+    //implementation 'com.github.dueeeke.dkplayer:player-exo:3.2.6'
+    // 可选，使用ijkplayer进行解码
+   //implementation 'com.github.dueeeke.dkplayer:player-ijk:3.2.6'
+    // 可选，如需要缓存或者抖音预加载功能请引入此库
+    //implementation 'com.github.dueeeke.dkplayer:videocache:3.2.6'
+
+    //banner https://github.com/youth5201314/banner
+    implementation 'com.youth.banner:banner:1.4.10'
+
+    implementation 'org.jsoup:jsoup:1.10.1'
+    // implementation 'com.github.open-android:Jsoup:jsoup-1.10.2'
+
+    implementation 'com.blankj:utilcodex:1.31.1'
+
+    // 下载 https://github.com/amitshekhariitbhu/Fast-Android-Networking
+    implementation 'com.amitshekhar.android:android-networking:1.0.2'
+    implementation 'com.amitshekhar.android:jackson-android-networking:1.0.2'
+
+    //强大的Android刷新库-SmoothRefreshLayout
+/*
+    implementation 'me.dkzwm.widget.srl:core:1.6.6.8'
+    implementation 'me.dkzwm.widget.srl:ext-util:1.6.6.8'
+    implementation 'me.dkzwm.widget.srl:ext-material:1.6.6.8'
+    implementation 'me.dkzwm.widget.srl:ext-horizontal:1.6.6.8'
+    implementation 'me.dkzwm.widget.srl:ext-classics:1.6.6.8'
+    implementation 'me.dkzwm.widget.srl:ext-two-level:1.6.6.8'
+*/
+    //图片预览/我这里是因为礼品兑换要用到第一个才加的
+    implementation 'com.lxj:xpopup:2.2.16'
+    implementation 'com.lxj:easyadapter:1.2.2'
+
+    // https://github.com/scwang90/SmartRefreshLayout
+    implementation 'androidx.appcompat:appcompat:1.0.0'                 //必须 1.0.0 以上
+    implementation 'com.scwang.smart:refresh-layout-kernel:2.0.3'      //核心必须依赖
+    implementation 'com.scwang.smart:refresh-header-classics:2.0.3'    //经典刷新头
+    implementation 'com.scwang.smart:refresh-footer-classics:2.0.3'    //经典加载
+    // 注解工具
+    implementation 'com.jakewharton:butterknife:10.2.3'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
+    // https://github.com/li-xiaojun/XPopup  图片预览
+    //implementation 'com.lxj:xpopup:2.2.16'
+    //implementation 'com.lxj:easyadapter:1.2.2'
+    //https://github.com/kongzue/Dialog  弹窗控件
+    implementation 'com.kongzue.dialog:dialog:2.5.2'
+    implementation 'org.greenrobot:eventbus:3.3.1'
+    //约束布局
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+
+    implementation 'org.greenrobot:greendao:3.3.0'
+
+    // 此配置默认集成 LiteAVSDK_Player 最新版本
+   // implementation 'com.tencent.liteav:LiteAVSDK_Player:latest.release'
+    // 集成历史版，如：10.7.0.13038 版本，可通过下面方式集成
+     implementation 'com.tencent.liteav:LiteAVSDK_Player:10.7.0.13038'
+
+   // implementation 'com.github.yangfeng1994:FFmpeg-Android:v2.0.1'
+
+    //# 必选，内部默认使用系统mediaplayer进行解码
+    implementation 'xyz.doikki.android.dkplayer:dkplayer-java:3.3.7'
+    //# 可选，包含StandardVideoController的实现
+    implementation 'xyz.doikki.android.dkplayer:dkplayer-ui:3.3.7'
+   // # 可选，使用exoplayer进行解码
+    //implementation 'xyz.doikki.android.dkplayer:player-exo:3.3.7'
+   // # 可选，使用ijkplayer进行解码
+    implementation 'xyz.doikki.android.dkplayer:player-ijk:3.3.7'
+    //# 可选，如需要缓存或者抖音预加载功能请引入此库
+    implementation 'xyz.doikki.android.dkplayer:videocache:3.3.7'
+
+    //implementation 'com.github.GitHubZJY:AudioVisualizeView:v1.0.0'
+
+    implementation 'com.wx.goodview:goodview:1.0.0'
+   // https://github.com/hty527/iMusic
+    implementation 'com.github.hty527.iMusic:music-player:1.2.0'
+
+    implementation "com.google.android:flexbox:2.0.1"
+
+  //  implementation 'com.tencent.liteav:LiteAVSDK_Player:10.7.0.13038'
+  //  implementation project(':superplayerkit')
+    // 播放器组件弹幕集成的第三方库
+  //  implementation 'com.github.ctiao:DanmakuFlameMaster:0.5.3'
+
+
+      /*  // 友盟基础组件库（所有友盟业务SDK都依赖基础组件库）
+        implementation  'com.umeng.umsdk:common:9.5.4'// (必选)
+        implementation  'com.umeng.umsdk:asms:1.6.3'// 必选
+
+        implementation  'com.umeng.umsdk:abtest:1.0.1'//使用U-App中ABTest能力，可选
+        implementation 'com.umeng.umsdk:apm:1.8.1'// U-APM产品包依赖(必选)
+
+        //友盟Push依赖
+        api 'com.umeng.umsdk:push:6.5.7'
+        implementation  'com.umeng.umsdk:share-core:7.3.0'//分享核心库，必选
+        implementation  'com.umeng.umsdk:share-board:7.3.0'//分享面板功能，可选
+
+        //在线依赖目前支持QQ、微信、新浪微博、支付宝、钉钉、抖音；若需支持其他平台，请选择手动下载SDK
+
+        implementation 'com.umeng.umsdk:share-wx:7.3.0' //微信完整版
+        implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:6.8.0' //微信官方依赖库
+
+        implementation 'com.umeng.umsdk:share-qq:7.3.0' //QQ完整版
+        implementation files('libs/open_sdk_3.5.14.3_rc26220c_lite.jar') //QQ官方依赖库*/
+
+        //用以设置App全局字体
+        //implementation 'uk.co.chrisjenx:calligraphy:2.2.0'
+
+
+
+}

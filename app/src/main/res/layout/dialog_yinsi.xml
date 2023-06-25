@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="300.0dip"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="5.0dip"
+        app:cardElevation="0.0dip">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingLeft="21.0dip"
+            android:paddingRight="21.0dip">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="66.0dip"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="个人信息保护指引"
+                android:textColor="@color/black"
+                android:textSize="15.0sp" />
+
+            <TextView
+                android:id="@+id/tv_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_title"
+                android:layout_centerHorizontal="true"
+                android:text="用户协议和隐私政策"
+                android:textColor="#80000000"
+                android:textSize="12.0sp" />
+
+            <TextView
+                android:id="@+id/tv_finish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_desc"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30.0dip"
+                android:layout_marginBottom="20.0dip"
+                android:background="?selectableItemBackgroundBorderless"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="暂不使用"
+                android:textColor="@color/read_text_color"
+                android:textSize="17.0sp" />
+
+            <TextView
+                android:id="@+id/tv_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_desc"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="30.0dip"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="20.0dip"
+                android:background="?selectableItemBackgroundBorderless"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="同意"
+                android:textColor="@color/textColor"
+                android:textSize="17.0sp" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

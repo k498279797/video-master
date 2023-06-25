@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bar_theme_color">#9939C5BB</color>
+    <!--Appbar背景色-->
+    <color name="colorPrimary">#7CA5FF</color>
+    <!--状态栏颜色-->
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <!--页面背景色-->
+    <color name="windowBackground">#FFFFFF</color>
+    <!--底部导航栏颜色-->
+    <color name="navigationBarColor">#BA7838</color>
+    <!--ToolBar上的Title颜色-->
+    <color name="textColorPrimary">#96000000</color>
+    <!--各个控制控件的默认颜色-->
+    <color name="colorControlNormal">#9939C5BB</color>
+
+
+    <color name="colorAccent">#2BB33E</color>
+    <color name="theme_color">#ff000000</color>
+    <color name="player_theme_color_translucent">#9939C5BB</color>
+    <color name="player_background_color">#96000000</color>
+    <!-- 走子 -->
+    <color name="walking_bg_s">#B67237</color>
+    <color name="walking_bg_n">#A5A5A5</color>
+    <color name="walking_text_s">#000000</color>
+    <color name="walking_text_n">#C6C6C6</color>
+
+    <color name="white">#ffffffff</color>
+    <color name="black">#ff000000</color>
+    <color name="read_text_color">#595959</color>
+    <color name="textColor">#7570ff</color>
+    <color name="text_protocol">#0000ff</color>
+    <color name="text_privacy">#e60073</color>
+
+    <color name="color_4E4E4E">#FF4E4E4E</color>
+    <color name="color_1B1B1B">#FF1B1B1B</color>
+    <color name="color_FFFFFF">#ffffff</color>
+    <color name="color_B67237">#B67237</color>
+    <color name="color_000000">#000000</color>
+    <color name="color_D8D7D7">#D8D7D7</color>
+    <color name="color_626262">#626262</color>
+    <color name="color_00ffffff">#00ffffff</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_tabTitle">#B6B6B6</color>
+    <color name="color_tabTitle_selected">#EC5840</color>
+    <color name="color_00000000">#00000000</color>
+    <color name="top_title_color">#FFFFFF</color>
+    <color name="top_hint_color">#999999</color>
+    <color name="main_page_color">#F7F7F7</color>
+    <color name="page_bg_color">#FFFFFF</color>
+    <color name="page_text_color">#333333</color>
+    <color name="page_text_desc_color">#999999</color>
+    <color name="rate_bg_color">#EE9004</color>
+    <color name="rate_text_color">#FFFFFF</color>
+    <color name="video_update_bg_color">#7E050505</color>
+
+    <color name="drag_scale_bg">#9EADABAB</color>
+    <color name="drag_scale_border">#ccc</color>
+
+</resources>

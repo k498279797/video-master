@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="user-scalable=no,width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+<div id="editor" class="wrap2" contenteditable="true">
+    <video id="video"></video>
+</div>
+<script type="text/javascript" src="rich_editor.js"></script>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<script>
+ var video = document.getElementById('video');
+   if (Hls.isSupported()) {
+    var hls = new Hls();
+    hls.on(Hls.Events.MEDIA_ATTACHED, function () {
+      console.log('video and hls.js are now bound together !');
+    });
+    hls.on(Hls.Events.MANIFEST_PARSED, function (event, data) {
+      console.log(
+        'manifest loaded, found ' + data.levels.length + ' quality level'
+      );
+    });
+    hls.loadSource('https://vod3.bdzybf7.com/20221119/FnZBvgl2/index.m3u8');
+    // bind them together
+    hls.attachMedia(video);
+    video.play();
+  }
+</script>
+</body>
+</html>

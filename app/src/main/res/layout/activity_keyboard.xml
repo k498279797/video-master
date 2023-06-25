@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F7F7"
+    android:orientation="vertical">
+    <View
+        android:id="@+id/my_topbar"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimaryDark"
+        android:layout_height="0dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="left|center_horizontal">
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="120dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingRight="80dp"
+            android:layout_height="38dp"
+            android:src="@mipmap/ic_back"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:id="@+id/txt_show_set_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#333333"
+            android:text="快捷键大全"
+            android:textSize="20sp" />
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_marginTop="6dp"
+               android:paddingLeft="10dp"
+               android:paddingRight="10dp"
+               android:paddingBottom="10dp"
+               android:background="@drawable/bg_white"
+               android:orientation="vertical">
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="常用快捷键"
+                   android:paddingTop="5dp"
+                   android:paddingBottom="10dp"
+                   android:textSize="18sp"
+                   android:textColor="#666666"
+                   android:padding="10dp"
+                   />
+              <View
+                   android:id="@+id/keyboard_top_line"
+                   android:layout_width="match_parent"
+                   android:layout_height="0.5dp"
+                   android:background="@drawable/shape_table_top"/>
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+                   <androidx.recyclerview.widget.RecyclerView
+                       android:id="@+id/keyboard_rec_view"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent" />
+               </RelativeLayout>
+           </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

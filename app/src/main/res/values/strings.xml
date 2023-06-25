@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">爱看视频</string>
+    <string name="tab_index_name">首页</string>
+    <string name="tab_tv_name">电视</string>
+    <string name="tab_hot_name">网站</string>
+    <string name="tab_class_name">精选</string>
+    <string name="tab_class_music">音乐</string>
+    <string name="tab_class_huang">小黄书</string>
+    <string name="tab_my_name">我的</string>
+    <string name="tab_music">音乐课堂</string>
+    <string name="tab_music_title_one">歌曲创作训练营 系统作曲教程</string>
+    <string name="tab_music_title_two">【伯克利音乐学院】作曲写...</string>
+    <string name="tab_music_title_three">混音教程合集】从零系统学混音</string>
+    <string name="tab_music_title_four">CUBASE混音课程软件操作</string>
+    <string name="tab_music_title_five">音乐大师都在用的软件插件</string>
+    <string name="tab_music_content_one">以最通俗易懂的方式讲解EQ、混响、压缩等,轻松入门</string>
+    <string name="tab_music_content_two">快速上手编曲混音软件!cubase软件操作系列</string>
+    <string name="tab_music_content_three">明星同款混音录音软件、编曲音源大揭秘!</string>
+    <string name="tab_music_people_number">2512人已观看</string>
+    <string name="tab_music_set_number">共10集</string>
+    <string name="tab_music_price_one">￥9.99</string>
+    <string name="tab_music_price_two">￥26.00</string>
+
+    <string name="txt_content">习近平指出，欢迎你来华访问，感谢你第一时间来信祝贺中国共产党第二十次全国代表大会召开。中国和巴基斯坦是好朋友、好伙伴、好兄弟。近年来，两国在世界变局乱局中相互支持、砥砺前行，彰显中巴“铁杆”情谊。中方始终从战略高度和长远角度看待中巴关系，始终将巴基斯坦置于周边外交的优先方向，愿同巴方提升全方位战略合作水平，加快构建新时代更加紧密的中巴命运共同体，为中巴全天候战略合作伙伴关系注入新动力。
+
+　　习近平强调，中方赞赏巴方坚定推进对华友好合作，感谢巴方在涉及中国核心和重大关切问题上支持中方，将坚定支持巴方维护国家主权和领土完整、发展利益、民族尊严，坚定支持巴基斯坦实现稳定团结、发展繁荣。中方对巴基斯坦人民遭受特大洪灾深表同情，将追加提供紧急援助，帮助巴基斯坦灾后重建，支持巴方恢复灾后农业生产，加强防灾减灾、应对气候变化合作。
+
+　　习近平介绍了中国共产党第二十次全国代表大会取得的重要成果。习近平指出，中国将继续坚持对外开放基本国策，不断以中国新发展为包括巴基斯坦在内的世界各国提供新机遇。中方愿同巴方深化发展战略对接。双方要用好中巴经济走廊联合合作委员会机制，以更高效率推进中巴经济走廊建设，将其打造成“一带一路”高质量发展示范性工程。要加快推进瓜达尔港配套基础设施建设，发挥港口对地区联通发展的辐射带动作用。双方要共同努力，为早日实施一号铁路干线升级改造项目和卡拉奇环城铁路项目创造条件。中方欢迎巴基斯坦扩大优质农产品对华出口，愿同巴方拓展数字经济、电子商务、光伏等新能源合作，扎实推进农业、科技、民生等领域合作，将继续为巴方稳定金融形势提供力所能及的支持。中方支持中国工业强省同巴方结对子推进产业合作，希望巴方提供良好营商环境。我高度牵挂在巴中国人的安全问题，希望巴方为赴巴基斯坦开展合作的中国机构和人员提供可靠安全环境。
+
+　　习近平指出，当前，世界之变、时代之变、历史之变正以前所未有的方式展开。面对高度不确定的世界，双方要站在历史正确的一边，保持在国际多边机制中的高水平合作，在重大国际地区问题上密切配合，维护真正的多边主义，维护国际公平正义，维护发展中国家共同利益，为世界提供确定性和正能量。中方愿同巴方一道，推动落实好全球发展倡议和全球安全倡议，推动全球经济治理体系朝着更加公正合理、普惠共赢的方向发展，构建人类命运共同体，为两国发展提供有力保障，为世界和平稳定和共同繁荣作出更多贡献。</string>
+
+
+    <string name="lucky_monkey_title">Wheel of Fortune</string>
+    <string name="lucky_monkey_times_left">times left</string>
+    <string name="lucky_monkey_fortune_list">Check out your fortune list</string>
+
+</resources>

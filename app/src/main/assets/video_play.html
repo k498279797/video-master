@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="user-scalable=no,width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet">
+    <script src="https://unpkg.com/video.js/dist/video.js"></script>
+</head>
+<body>
+<div id="editor" class="wrap" contenteditable="true">
+    <video  class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" width="350" height="280" data-setup='{}'>
+        <source src="https://baidu.sd-play.com/20221122/1nZnwvaY/index.m3u8" type="application/x-mpegURL">
+    </video>
+</div>
+<script type="text/javascript" src="rich_editor.js"></script>
+<script type="text/javascript" src="jquery.min.js"></script>
+</body>
+<script>
+    var url = window.location.href;
+    if(url.indexOf("?") !=-1 && url.startsWith("file:")){
+        url = url.substring(url.indexOf("?"));
+    }
+    document.getElementsByTagName("source")[0].src = url;
+    //alert(url);
+</script>
+
+</html>

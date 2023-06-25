@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#f7f7f7"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+  <View android:id="@+id/my_topbar"
+      android:background="@color/colorPrimaryDark"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"/>
+  <RelativeLayout android:gravity="center"
+      android:background="@color/colorPrimaryDark"
+      android:layout_width="match_parent"
+      android:layout_height="40dp">
+    <TextView android:textSize="20sp"
+        android:textColor="#333333"
+        android:id="@+id/page_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tab_tv_name"/>
+  </RelativeLayout>
+  <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="190dp">
+      <!-- 播放器组件-->
+      <!--<com.tencent.liteav.demo.superplayer.SuperPlayerView
+          android:id="@+id/dk_player"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent" >-->
+      <xyz.doikki.videoplayer.player.VideoView
+          android:id="@+id/dk_player"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent" >
+        <ImageView android:id="@+id/curr_video_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/hunan"
+            android:scaleType="centerCrop"/>
+    <!--  </com.tencent.liteav.demo.superplayer.SuperPlayerView>-->
+    </xyz.doikki.videoplayer.player.VideoView>
+    </LinearLayout>
+    <RelativeLayout android:gravity="center" android:layout_gravity="center" android:id="@+id/video_detail_container" android:background="#5f000000" android:layout_width="match_parent" android:layout_height="190dp" android:layout_marginTop="-190dp">
+      <LinearLayout android:gravity="center" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="65dp" android:layout_centerHorizontal="true">
+        <ImageView android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/ic_play_btn" android:layout_width="match_parent" android:layout_height="45dp" android:src="@mipmap/ic_play" android:layout_weight="1"/>
+      </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:background="@drawable/bg_white" android:paddingLeft="10dp" android:paddingTop="5dp" android:paddingBottom="5dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+      <TextView android:textSize="16sp" android:textColor="#333333" android:ellipsize="end" android:id="@+id/curr_video_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="PPT大纲创建幻灯片" android:singleLine="true"/>
+    </LinearLayout>
+    <FrameLayout android:gravity="center" android:layout_gravity="center" android:background="@color/page_bg_color" android:visibility="gone" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="10dp" android:layout_marginTop="10dp" android:layout_marginRight="10dp">
+      <TextView android:textSize="20sp" android:textColor="@color/page_text_color" android:gravity="center" android:background="@drawable/shape_table_left" android:paddingLeft="10dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="卫视列表"/>
+      <ImageView android:gravity="right|center_vertical|center_horizontal|center" android:layout_gravity="right" android:paddingLeft="20dp" android:paddingRight="10dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@mipmap/more" android:layout_alignParentRight="true"/>
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:paddingBottom="20dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="5dp" android:layout_marginRight="5dp">
+      <androidx.recyclerview.widget.RecyclerView android:id="@+id/tv_channel_rec_view" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    </LinearLayout>
+  </LinearLayout>
+</LinearLayout>

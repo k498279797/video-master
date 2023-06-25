@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F7F7F7"
+    android:orientation="vertical">
+    <View
+        android:id="@+id/my_topbar"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimaryDark"
+        android:layout_height="0dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="left|center_horizontal">
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="120dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingRight="80dp"
+            android:layout_height="38dp"
+            android:src="@mipmap/ic_back"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:id="@+id/txt_show_set_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#333333"
+            android:text=""
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical">
+           <LinearLayout
+               android:id="@+id/class_item_container"
+               android:layout_height="140dp"
+               android:layout_marginBottom="10dp"
+               android:layout_width="match_parent"
+               android:orientation="horizontal">
+               <LinearLayout
+                   android:layout_width="0dp"
+                   android:layout_height="match_parent"
+                   android:layout_marginLeft="15dp"
+                   android:layout_marginRight="10dp"
+                   android:background="@drawable/bg_white"
+                   android:layout_weight="2">
+                   <ImageView
+                       android:id="@+id/class_item_img"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:scaleType="centerCrop"
+                       android:src="@mipmap/banner"/>
+               </LinearLayout>
+               <LinearLayout
+                   android:layout_width="0dp"
+                   android:layout_height="match_parent"
+                   android:layout_gravity="left|center"
+                   android:background="@drawable/bg_white"
+                   android:gravity="center"
+                   android:layout_weight="4"
+                   android:paddingLeft="10dp"
+                   android:orientation="vertical">
+                   <TextView
+                       android:id="@+id/class_item_title"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:textSize="16sp"
+                       android:textColor="#111"
+                       android:lines="1"
+                       android:textStyle="bold"
+                       android:textFontWeight="100"
+                       android:ellipsize="end"
+                       android:text="扫黑风暴"/>
+                   <TextView
+                       android:id="@+id/class_item_zz"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:textSize="10sp"
+                       android:textColor="#333333"
+                       android:lines="1"
+                       android:ellipsize="end"
+                       android:text="主演： 孙红雷 张艺兴 刘奕君 吴越 王志飞 刘之冰 "/>
+                   <TextView
+                       android:id="@+id/class_item_bz"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:textSize="10sp"
+                       android:textColor="#333333"
+                       android:lines="1"
+                       android:ellipsize="end"
+                       android:text="备注： 第28集"/>
+                   <TextView
+                       android:id="@+id/class_item_gk"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:textSize="10sp"
+                       android:textColor="#333333"
+                       android:lines="1"
+                       android:ellipsize="end"
+                       android:text="观看： 加载中... 人正在观看"/>
+                   <TextView
+                       android:id="@+id/class_item_dy"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:textSize="10sp"
+                       android:textColor="#333333"
+                       android:lines="1"
+                       android:ellipsize="end"
+                       android:text="导演： 五百"/>
+                   <TextView
+                       android:id="@+id/class_item_nd"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:textSize="10sp"
+                       android:textColor="#333333"
+                       android:lines="1"
+                       android:ellipsize="end"
+                       android:text="年代： 2021"/>
+                   <TextView
+                       android:id="@+id/class_item_gx"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:textSize="10sp"
+                       android:textColor="#333333"
+                       android:lines="1"
+                       android:ellipsize="end"
+                       android:text="更新： 2022-10-12 23:07"/>
+                   <TextView
+                       android:id="@+id/class_item_yy"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:textSize="10sp"
+                       android:textColor="#333333"
+                       android:lines="1"
+                       android:ellipsize="end"
+                       android:text="语言： 国语"/>
+               </LinearLayout>
+
+           </LinearLayout>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:visibility="gone"
+               android:paddingTop="5dp"
+               android:paddingBottom="5dp"
+               android:paddingLeft="10dp"
+               android:background="@drawable/bg_white"
+               android:orientation="vertical">
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:singleLine="true"
+                   android:ellipsize="end"
+                   android:text="线路"
+                   android:textSize="16sp"
+                   android:textColor="#333333"/>
+           </LinearLayout>
+
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:paddingBottom="10dp">
+               <androidx.recyclerview.widget.RecyclerView
+                   android:id="@+id/tab_rec_view"
+                   android:layout_marginLeft="15dp"
+                   android:layout_marginRight="15dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content" />
+           </RelativeLayout>
+
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:layout_weight="1"
+               android:layout_marginLeft="10dp"
+               android:layout_marginRight="10dp"
+               android:orientation="vertical">
+               <androidx.recyclerview.widget.RecyclerView
+                   android:id="@+id/detail_rec_view"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent" />
+           </RelativeLayout>
+       </LinearLayout>
+
+
+
+</LinearLayout>

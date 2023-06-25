@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.vxiaokang.video">
+
+    <!--点播播放器悬浮窗权限-->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <!-- 读取sd卡权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 检测联网方式，在网络异常状态下避免数据发送，节省流量和电量 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!-- 获取用户设备的IMEI，通过IMEI对用户进行唯一标识，以便提供统计分析服务。 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!-- 允许应用程序联网和发送统计数据的权限，以便提供统计分析服务 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:hardwareAccelerated="true"
+        android:theme="@style/AppTheme"
+        android:extractNativeLibs="true"
+        android:usesCleartextTraffic="true"
+        android:networkSecurityConfig="@xml/network_config"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name=".activity.StartActivity"
+            android:launchMode="singleInstance"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 主页面 -->
+        <activity android:name=".activity.MainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+
+        <!-- webview -->
+        <activity android:name=".activity.WebViewActivity"
+            android:launchMode="singleInstance"
+            android:hardwareAccelerated="true"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <!-- webview -->
+        <activity android:name=".activity.WebSiteViewActivity"
+            android:launchMode="singleInstance"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:hardwareAccelerated="true" />
+        <!-- 意见反馈 -->
+        <activity android:name=".activity.FeedBackActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <!-- 视频详情 -->
+        <activity android:name=".activity.ClassDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <!-- 视频列表 -->
+        <activity android:name=".activity.ClassListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <!-- 常用快捷键 -->
+        <activity android:name=".activity.KeyBoardActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.HistoryListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.ToolsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.OpenWebSiteActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".activity.VideoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.video.huang.HuangVideoListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.video.huang.HuangVideoDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.video.huang.HuangVideoSearchListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.video.huang.HuangVideoMainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".activity.OpenVideoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.VideoPlayActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <!-- 88影视 http://88hd.com-->
+        <activity android:name=".activity.video.hdtv.HdtvVideoListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.video.hdtv.HdtvVideoDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.video.hdtv.HdtvVideoDetailPlayActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+        <!-- 88影视 -->
+        <activity android:name=".activity.video.shipin.ShipinVideoListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.video.shipin.ShipinVideoDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.video.shipin.ShipinVideoDetailPlayActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+        <!-- 片库 -->
+        <activity android:name=".activity.video.pkmp.PkmpVideoListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.video.pkmp.PkmpVideoDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.video.pkmp.PkmpVideoDetailPlayActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+        <!-- 88影视 -->
+        <activity android:name=".activity.video.yinshi.YinshiVideoListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.video.yinshi.YinshiVideoDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.video.yinshi.YinshiVideoDetailPlayActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+
+        <!-- 6080kan -->
+        <activity android:name=".activity.video.kantv.KantvVideoListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.video.kantv.KantvVideoDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.video.kantv.KantvVideoDetailPlayActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+        <!-- https://www.94kan.cc -->
+        <activity android:name=".activity.video.kancc.KanccVideoListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.video.kancc.KanccVideoDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.video.kancc.KanccVideoDetailPlayActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+
+        <!-- www.1080kdy.com -->
+        <activity android:name=".activity.video.kdy.KdyVideoListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.video.kdy.KdyVideoDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.video.kdy.KdyVideoDetailPlayActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+
+        <!-- http://www.meijugua.com -->
+        <activity android:name=".activity.video.meijugua.MeijuguaVideoListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.video.meijugua.MeijuguaVideoDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.video.meijugua.MeijuguaVideoDetailPlayActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+
+        <!-- https://gaytubewatch.com  https://vip.aqdz156.com https://gaytubewatch.com/clips/12719327/Hardcore-orgy-with-muscular-Colby-Jansen/ -->
+        <activity android:name=".activity.video.tube.TubeVideoListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.video.tube.TubeVideoDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.video.tube.TubeVideoDetailPlayActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+
+        <!-- https://66ams.top -->
+        <activity android:name=".activity.video.ams.AmsVideoListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.video.ams.AmsVideoDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.video.ams.AmsVideoDetailPlayActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+        <!-- https://gaydude.me -->
+        <activity android:name=".activity.video.gaydude.DudeVideoListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.video.gaydude.DudeVideoDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.video.gaydude.DudeVideoDetailPlayActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+
+        <!-- https://gaytubewatch.com/ -->
+        <activity android:name=".activity.video.gaytube.GaytubeVideoListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.video.gaytube.GaytubeVideoDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.video.gaytube.GaytubeVideoDetailPlayActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+
+        <!-- 倒置文字 -->
+        <activity android:name=".activity.tool.TextRotationActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <!-- 分类 -->
+        <activity android:name=".activity.video.local.LocalCateActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.video.local.LocalVideoListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.tool.DragScaleActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <!--磁力猫-->
+        <activity android:name=".activity.video.clm.ClmSearchListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <!--h5视频播放-->
+        <activity android:name=".activity.WebViewVideoPlayActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.WebPlayActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+        <!--烟花-->
+        <activity android:name=".activity.firework.FireworkShowActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".activity.tool.SleepActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".activity.tool.LuckCircleActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.tool.luck.LuckMainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.tool.luck.LuckyPanMainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+        <!-- 音乐搜索 -->
+        <activity android:name=".activity.music.MusicSearchListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+        <!-- 音乐搜索结果 -->
+        <activity android:name=".activity.music.MusicResultListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+        <!-- 应用安装 -->
+        <activity android:name=".activity.tool.AppInstallActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+        <!-- 水波纹 -->
+        <activity android:name=".activity.tool.WaterRippleActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+
+        <!-- 友盟start -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5fd6c238498d9e0d4d8bf950" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="huawei" />
+        <!-- 友盟end -->
+
+        <!--允许绘制到oppo、vivo刘海屏机型的刘海区域 -->
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.8" />
+        <!-- 允许绘制到华为刘海屏机型的刘海区域 -->
+        <meta-data
+            android:name="android.notch_support"
+            android:value="true" />
+        <!-- 允许绘制到小米刘海屏机型的刘海区域 -->
+        <meta-data
+            android:name="notch.config"
+            android:value="landscape" />
+
+    </application>
+
+</manifest>

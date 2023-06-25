@@ -1,0 +1,4 @@
+include ':app'
+//include ':superplayerkit'
+//include ':deprecatedcommon'
+//project(':deprecatedcommon').projectDir = new File(settingsDir, './common')
