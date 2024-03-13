@@ -33,5 +33,5 @@ jobs:
       - uses: actions/upload-artifact@v2
         name: upload build output
         with:
-         name: 下载的压缩包名字
+         name: video.apk
          path: ${{ github.workspace }}/app/build/outputs/apk/release
